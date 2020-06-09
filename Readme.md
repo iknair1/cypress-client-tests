@@ -20,7 +20,12 @@ npm i
 Integration with Circle CI was pretty straightforward.
 The hardest part was to get the client running and cypress to talk to the client. 
 `background:true`, npm modules like `wait-on` etc did not work for us. 
-The workaround can be seen in the circle.ci file (build-client-run-cypress-tests).
+The workaround can be seen in the circle.ci file (build-client-run-cypress-tests)
+
+![Workflow](/Workflow.png)
+
+![Passing Tests](/PassingTests.png)
+
 
 ##### To do:
 1. In future I may split the single job into two, one to build and start the server and the next one to run the cypress tests.
