@@ -2,11 +2,11 @@
 
 ##### Lets begin with pain points!
 The performance app under test was making were making fetch calls which are and not supported by Cypress. 
-I have used polyfill as a workaround(/tests/cypress/integration/dashboard.spec.js). 
+I have used polyfill as a workaround(Example can be seen here: /tests/cypress/integration/dashboard.spec.js). 
 This then allows me to make a XHR request for which I have mocked the responses. [Read more here](https://github.com/cypress-io/cypress-example-recipes/blob/master/examples/stubbing-spying__window-fetch/cypress/integration/polyfill-fetch-from-tests-spec.js)
 
 In the nutshell, we have mocked all the server side calls i.e /properties,/client/config,/count?property=**,
-The idea is to delete all the fetch calls before load and then evaluate the XHR requests. Once that is done, we run the tests for that particular page.
+The idea is to delete all the fetch calls before load and then evaluate the XHR requests. Once that is done, we run the client side tests for that particular page.
 
 To start cypress tests from your terminal(on MAC): 
 ```
